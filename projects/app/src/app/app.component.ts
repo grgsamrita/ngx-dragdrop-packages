@@ -19,7 +19,9 @@ export class AppComponent {
     maxFiles: 1,
     autoReset: null,
     errorReset: null,
-    cancelReset: null
+    cancelReset: null,
+    previewsContainer: '.dropzone-previews',
+    // previewTemplate: ``
   };
 
   @ViewChild(DropzoneComponent, { static: false }) componentRef?: DropzoneComponent;
@@ -68,4 +70,10 @@ export class AppComponent {
   public onUploadSuccess(args: any): void {
     console.log('onUploadSuccess:', args);
   }
+
+  public getImage(args: any): void {
+    console.log(args);
+  }
+
+  
 }

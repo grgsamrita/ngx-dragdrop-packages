@@ -8,6 +8,12 @@ import { DropzoneModule, DropzoneConfigInterface,
   DROPZONE_CONFIG } from 'ngx-dropzone-wrapper';
 
 import { AppComponent } from './app.component';
+import { AngularFileUploaderModule } from "angular-file-uploader";
+import { AngularFileUploaderComponent } from './angular-file-uploader/angular-file-uploader.component';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+import { NgxDropzoneComponent } from './ngx-dropzone/ngx-dropzone.component';
+import { NgxFileDropComponent } from './ngx-file-drop/ngx-file-drop.component';
+import { NgxFileDropModule } from 'ngx-file-drop';
 
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
   // Change this to your upload POST address:
@@ -21,12 +27,18 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
       AppComponent
     ],
     declarations: [
-      AppComponent
+      AppComponent,
+      AngularFileUploaderComponent,
+      NgxDropzoneComponent,
+      NgxFileDropComponent
     ],
     imports: [
       DropzoneModule,
       BrowserModule,
       FlexLayoutModule,
+      AngularFileUploaderModule,
+      NgxDropzoneModule,
+      NgxFileDropModule
     ],
     exports: [
     ],

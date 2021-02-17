@@ -72,3 +72,9 @@
 .dropzone-container {
   height: 100%;
 }
+
+.custom-dropzone {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
